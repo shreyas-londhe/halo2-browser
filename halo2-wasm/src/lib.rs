@@ -182,6 +182,13 @@ impl Halo2Wasm {
         public.extend(instances);
     }
 
+    #[wasm_bindgen(js_name = useInstances)]
+    pub fn use_instances(&mut self) {
+        let new_instances = self.circuit.borrow_mut().assigned_instances[0].clone();
+        let public = self.public.get_mut(0).unwrap();
+        public.extend(new_instances);
+    }
+
     #[wasm_bindgen(js_name = getInstanceValues)]
     pub fn get_instance_values(&mut self, col: usize) -> JsValue {
         let values: Vec<&Fr> = self
