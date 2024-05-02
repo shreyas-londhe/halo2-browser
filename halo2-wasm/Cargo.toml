@@ -17,10 +17,10 @@ crate-type = ["cdylib", "lib"]
 wasm-bindgen = { version = "0.2.87" }
 
 # halo2-base = { version = "0.4.1", features = ["halo2-axiom"] }
-halo2-base = { git = "https://github.com/shreyas-londhe/halo2-lib.git", branch = "feat/secp256k1-hash2curve", features = ["halo2-axiom"] }
+halo2-base = { git = "https://github.com/shreyas-londhe/halo2-lib.git", branch = "feat/secp256k1-hash2curve-poseidon", features = ["halo2-axiom"] }
 
 # halo2-ecc = { version = "0.4.1", default-features = false, features = ["halo2-axiom"] }
-halo2-ecc = { git = "https://github.com/shreyas-londhe/halo2-lib.git", branch = "feat/secp256k1-hash2curve", default-features = false, features = ["halo2-axiom"] }
+halo2-ecc = { git = "https://github.com/shreyas-londhe/halo2-lib.git", branch = "feat/secp256k1-hash2curve-poseidon", default-features = false, features = ["halo2-axiom"] }
 
 # snark-verifier-sdk = { version = "0.1.7", default-features = false, features = ["loader_halo2", "halo2-axiom"] }
 snark-verifier-sdk = { git = "https://github.com/shreyas-londhe/snark-verifier.git", default-features = false, features = ["loader_halo2", "halo2-axiom"] }
